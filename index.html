@@ -16,14 +16,22 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-image: url('images\wallpaper.png');
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('wallpaper.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            mask-image: url('images\wallpaper.png');
-            mask-size: cover;
-            mask-repeat: no-repeat;
-            mask-position: center;
+            opacity: 0.7; /* Adjust opacity to make text more visible */
+            z-index: -1;
         }
 
         h1 {
@@ -41,6 +49,7 @@
     </style>
 </head>
 <body>
+    <div class="background"></div>
     <h1>The Jungle is Calling...</h1>
     <img src="logo.png" alt="Logo">
     <h2>Coming Soon!</h2>
